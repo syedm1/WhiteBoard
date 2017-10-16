@@ -106,6 +106,8 @@ public class RemoteServer extends UnicastRemoteObject implements IRemoteServer {
 	
 	@Override
 	public void removeClient(String clientname) throws RemoteException {
+		
+		
 		if (clients.containsKey(clientname)) {	
 			this.clients.remove(clientname);
 			String msg = clientname + " removed from " + this.roomName;
@@ -118,6 +120,8 @@ public class RemoteServer extends UnicastRemoteObject implements IRemoteServer {
 		} else {
 			System.out.println(clientname + "not exist");
 		}
+		
+		
 	}
 	
 	// remove client and close the window

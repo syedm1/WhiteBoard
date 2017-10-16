@@ -181,7 +181,8 @@ public class ManagerClient {
 					});
 
 				} catch (Exception e) {
-					e.printStackTrace();
+					JOptionPane.showMessageDialog(null, "No server found with these details please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+					System.exit(0);
 				}
 			}
 		});
